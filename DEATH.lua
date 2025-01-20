@@ -872,7 +872,7 @@ for i,v in XP:GetDescendants() do
 	if v:IsA("Part") then
 
 	local Button = MainTab:CreateButton({
-		Name = "Router" + 1,
+		Name = "Router" .. i,
 		Callback = function()
 			-- Settings
 			local Location = v.Position

@@ -867,12 +867,15 @@ local MainTab = Window:CreateTab("XP Routers", 109395995934792)
 local MainSection = MainTab:CreateSection("All Routers")
 
 local XP = workspace.Routers
+local counter = 1
 
 for i,v in XP:GetDescendants() do 
 	if v:IsA("Part") then
 
 	local Button = MainTab:CreateButton({
-		Name = "Router" .. i,
+		Name = "Router" .. counter,
+		counter = counter + 1,
+		
 		Callback = function()
 			-- Settings
 			local Location = v.Position
